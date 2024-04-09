@@ -1,0 +1,3 @@
+com.storehub.store.common.feign.StoreFeignAutoConfiguration
+com.storehub.store.common.feign.sentinel.SentinelAutoConfiguration
+com.storehub.store.common.feign.sentinel.handle.GlobalBizExceptionHandler

@@ -1,0 +1,6 @@
+com.storehub.store.common.core.config.TaskExecutorConfiguration
+com.storehub.store.common.core.config.JacksonConfiguration
+com.storehub.store.common.core.config.RedisTemplateConfiguration
+com.storehub.store.common.core.config.RestTemplateConfiguration
+com.storehub.store.common.core.util.SpringContextHolder
+com.storehub.store.common.core.config.WebMvcConfiguration

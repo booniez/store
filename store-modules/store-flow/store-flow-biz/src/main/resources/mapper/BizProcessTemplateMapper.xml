@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.storehub.store.flow.mapper.BizProcessTemplateMapper">
+
+  <resultMap id="bizProcessTemplateMap" type="com.storehub.store.flow.api.entity.BizProcessTemplateEntity">
+        <id property="id" column="id"/>
+        <id property="name" column="name"/>
+        <id property="remark" column="remark"/>
+        <id property="templateJson" column="template_json"/>
+        <id property="createBy" column="create_by"/>
+        <id property="createTime" column="create_time"/>
+        <id property="updateBy" column="update_by"/>
+        <id property="updateTime" column="update_time"/>
+        <id property="delFlag" column="del_flag"/>
+        <id property="tenantId" column="tenant_id"/>
+  </resultMap>
+</mapper>

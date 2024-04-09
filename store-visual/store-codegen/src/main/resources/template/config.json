@@ -1,0 +1,12 @@
+{
+  "project": {
+    "packageName": "com.storehub.store",
+    "version": "1.0.0",
+    "backendPath": "store",
+    "frontendPath": "store-ui"
+  },
+  "developer": {
+    "author": "store",
+    "email": "store4cloud@qq.com"
+  }
+}

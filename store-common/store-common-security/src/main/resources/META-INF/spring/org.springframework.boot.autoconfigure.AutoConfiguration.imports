@@ -1,0 +1,7 @@
+com.storehub.store.common.security.service.StoreUserDetailsServiceImpl
+com.storehub.store.common.security.service.StoreAppUserDetailsServiceImpl
+com.storehub.store.common.security.service.StoreRedisOAuth2AuthorizationService
+com.storehub.store.common.security.service.StoreRedisOAuth2AuthorizationConsentService
+com.storehub.store.common.security.component.StoreSecurityInnerAspect
+com.storehub.store.common.security.component.StoreSecurityMessageSourceConfiguration
+com.storehub.store.common.security.service.StoreRemoteRegisteredClientRepository

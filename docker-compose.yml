@@ -1,0 +1,106 @@
+version: '3'
+services:
+  store-mysql:
+    build:
+      context: ./db
+    environment:
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: store-mysql
+    image: store-mysql
+    ports:
+      - 3306:3306
+    networks:
+      - spring_cloud_default
+
+  store-redis:
+    image: redis:7.2.4
+    ports:
+      - 6379:6379
+    restart: always
+    container_name: store-redis
+    hostname: store-redis
+    networks:
+      - spring_cloud_default
+
+  store-register:
+    build:
+      context: ./store-register
+    restart: always
+    ports:
+      - 8848:8848
+      - 9848:9848
+    container_name: store-register
+    hostname: store-register
+    image: store-register
+    networks:
+      - spring_cloud_default
+
+  store-gateway:
+    build:
+      context: ./store-gateway
+    restart: always
+    ports:
+      - 9999:9999
+    container_name: store-gateway
+    hostname: store-gateway
+    image: store-gateway
+    networks:
+      - spring_cloud_default
+
+  store-auth:
+    build:
+      context: ./store-auth
+    restart: always
+    container_name: store-auth
+    hostname: store-auth
+    image: store-auth
+    networks:
+      - spring_cloud_default
+
+  store-upms:
+    build:
+      context: ./store-upms/store-upms-biz
+    restart: always
+    container_name: store-upms
+    hostname: store-upms
+    image: store-upms
+    networks:
+      - spring_cloud_default
+
+  store-monitor:
+    build:
+      context: ./store-visual/store-monitor
+    restart: always
+    ports:
+      - 5001:5001
+    container_name: store-monitor
+    hostname: store-monitor
+    image: store-monitor
+    networks:
+      - spring_cloud_default
+
+  store-codegen:
+    build:
+      context: ./store-visual/store-codegen
+    restart: always
+    container_name: store-codegen
+    hostname: store-codegen
+    image: store-codegen
+    networks:
+      - spring_cloud_default
+
+  store-quartz:
+    build:
+      context: ./store-visual/store-quartz
+    restart: always
+    image: store-quartz
+    container_name: store-quartz
+    networks:
+      - spring_cloud_default
+
+networks:
+  spring_cloud_default:
+    name:  spring_cloud_default
+    driver: bridge

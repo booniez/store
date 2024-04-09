@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.storehub</groupId>
+		<artifactId>store-flow</artifactId>
+		<version>${revision}</version>
+	</parent>
+
+	<artifactId>store-flow-api</artifactId>
+	<packaging>jar</packaging>
+
+	<description>flow 接口模块</description>
+
+	<dependencies>
+		<!-- core 工具类 -->
+		<dependency>
+			<groupId>com.storehub</groupId>
+			<artifactId>store-common-core</artifactId>
+		</dependency>
+		<!--feign 注解依赖-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-openfeign-core</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--mybatis 依赖-->
+		<dependency>
+			<groupId>com.storehub</groupId>
+			<artifactId>store-common-mybatis</artifactId>
+		</dependency>
+		<!-- excel 导入导出 https://github.com/pig-mesh/excel-spring-boot-starter -->
+		<dependency>
+			<groupId>com.pig4cloud.excel</groupId>
+			<artifactId>excel-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+	</dependencies>
+</project>

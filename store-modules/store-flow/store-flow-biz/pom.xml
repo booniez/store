@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.storehub</groupId>
+        <artifactId>store-flow</artifactId>
+		<version>${revision}</version>
+    </parent>
+
+    <artifactId>store-flow-biz</artifactId>
+    <packaging>jar</packaging>
+
+    <description>flow 业务模块</description>
+
+
+    <dependencies>
+        <!--必备: 依赖api模块-->
+        <dependency>
+            <groupId>com.storehub</groupId>
+            <artifactId>store-flow-api</artifactId>
+			<version>${revision}</version>
+        </dependency>
+        <!--选配: orm 模块-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+        </dependency>
+        <!--必备：安全模块-->
+        <dependency>
+            <groupId>com.storehub</groupId>
+            <artifactId>store-common-security</artifactId>
+        </dependency>
+        <!--必备：服务处理-->
+        <dependency>
+            <groupId>com.storehub</groupId>
+            <artifactId>store-common-feign</artifactId>
+        </dependency>
+        <!--必备：日志处理-->
+        <dependency>
+            <groupId>com.storehub</groupId>
+            <artifactId>store-common-log</artifactId>
+        </dependency>
+        <!--必备：swagger-->
+        <dependency>
+            <groupId>com.storehub</groupId>
+            <artifactId>store-common-swagger</artifactId>
+        </dependency>
+        <!--必备: 注册中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--必备: 配置中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!--必备：undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/org.flowable/flowable-spring-boot-starter -->
+		<dependency>
+			<groupId>org.flowable</groupId>
+			<artifactId>flowable-spring-boot-starter</artifactId>
+			<version>7.0.1</version>
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.flowable</groupId>-->
+<!--					<artifactId>flowable-spring-boot-starter-app</artifactId>-->
+<!--				</exclusion>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.flowable</groupId>-->
+<!--					<artifactId>flowable-form-spring-configurator</artifactId>-->
+<!--				</exclusion>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.flowable</groupId>-->
+<!--					<artifactId>flowable-idm-spring-configurator</artifactId>-->
+<!--				</exclusion>-->
+<!--				<exclusion>-->
+<!--					<artifactId>mybatis</artifactId>-->
+<!--					<groupId>org.mybatis</groupId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+		</dependency>
+
+	</dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

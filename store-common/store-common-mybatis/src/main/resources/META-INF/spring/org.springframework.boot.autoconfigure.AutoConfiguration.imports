@@ -1,0 +1,3 @@
+com.storehub.store.common.mybatis.MybatisAutoConfiguration
+com.storehub.store.common.mybatis.config.TenantConfigProperties
+com.storehub.store.common.mybatis.tenant.TenantContextHolderFilter

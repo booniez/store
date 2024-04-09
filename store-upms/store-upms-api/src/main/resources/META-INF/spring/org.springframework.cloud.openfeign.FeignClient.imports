@@ -1,0 +1,6 @@
+com.storehub.store.admin.api.feign.RemoteClientDetailsService
+com.storehub.store.admin.api.feign.RemoteDictService
+com.storehub.store.admin.api.feign.RemoteLogService
+com.storehub.store.admin.api.feign.RemoteParamService
+com.storehub.store.admin.api.feign.RemoteTokenService
+com.storehub.store.admin.api.feign.RemoteUserService

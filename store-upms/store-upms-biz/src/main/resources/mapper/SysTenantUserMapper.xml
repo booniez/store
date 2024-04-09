@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.storehub.store.admin.mapper.SysTenantUserMapper">
+
+  <resultMap id="sysTenantUserMap" type="com.storehub.store.admin.api.entity.SysTenantUser">
+        <id property="id" column="id"/>
+        <id property="userId" column="user_id"/>
+        <id property="lockFlag" column="lock_flag"/>
+        <id property="deptId" column="dept_id"/>
+        <id property="createBy" column="create_by"/>
+        <id property="createTime" column="create_time"/>
+        <id property="updateBy" column="update_by"/>
+        <id property="updateTime" column="update_time"/>
+        <id property="delFlag" column="del_flag"/>
+        <id property="tenantId" column="tenant_id"/>
+  </resultMap>
+</mapper>
